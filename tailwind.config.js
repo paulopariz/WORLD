@@ -5,6 +5,10 @@ module.exports = {
     "./src/**/*.{html,js,vue}"
   ],
   theme: {
+    container: {
+      center: true
+    },
+    
     extend: {},
   },
   plugins: [],
