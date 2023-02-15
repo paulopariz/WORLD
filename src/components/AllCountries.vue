@@ -21,7 +21,11 @@
             class="dropdown-content mt-2 menu p-2 bg-base-200 border-2 border-base-300 rounded-lg w-72 shadow-2xl"
           >
             <li><a class="hover:bg-base-300 active:bg-base-100">Africa</a></li>
-            <li><a class="hover:bg-base-300 active:bg-base-100">America</a></li>
+            <li>
+              <a @click="clickAmerica" class="hover:bg-base-300 active:bg-base-100"
+                >America</a
+              >
+            </li>
             <li><a class="hover:bg-base-300 active:bg-base-100">Asia</a></li>
             <li>
               <a @click="clickEurope" class="hover:bg-base-300 active:bg-base-100"
@@ -85,22 +89,29 @@ export default {
     };
   },
 
-  mounted() {
-    fetch(this.link)
-      .then((response) => response.json())
-      .then((data) => (this.paises = data));
-  },
-
   methods: {
-    clickEurope() {
-      this.link = "https://restcountries.com/v3.1/region/europe";
-
+    getCountries() {
       setTimeout(() => {
         fetch(this.link)
           .then((response) => response.json())
           .then((data) => (this.paises = data));
-      }, 2000);
+      }, 1000);
     },
+
+    clickEurope() {
+      this.link = "https://restcountries.com/v3.1/region/europe";
+
+      return this.getCountries();
+    },
+    clickAmerica() {
+      this.link = "https://restcountries.com/v3.1/region/america";
+
+      return this.getCountries();
+    },
+  },
+
+  mounted() {
+    return this.getCountries();
   },
 };
 </script>
