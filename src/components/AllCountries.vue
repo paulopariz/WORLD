@@ -12,27 +12,50 @@
         <div class="dropdown dropdown-end">
           <label
             tabindex="0"
-            class="btn h-16 bg-base-200 hover:bg-base-300 hover:border-base-200 border-2 border-base-300 text-base rounded-lg shadow-xl normal-case tracking-wider font-normal text-accent-content w-72 flex items-center gap-9"
-            >Filtrar por região
+            class="btn h-16 bg-base-200 hover:bg-base-300 hover:border-base-300 border-2 border-base-300 text-base rounded-lg shadow-xl normal-case tracking-wider font-normal text-accent-content w-72 flex items-center gap-9"
+            >{{ region }}
+            <span class="-ml-8 text-sm mt-0.5 text-base-content"
+              >( {{ paises.length }} )</span
+            >
             <img src="../assets/img/arrow.svg" class="w-3 mt-1.5 invert"
           /></label>
           <ul
             tabindex="0"
             class="dropdown-content mt-2 menu p-2 bg-base-200 border-2 border-base-300 rounded-lg w-72 shadow-2xl"
           >
-            <li><a class="hover:bg-base-300 active:bg-base-100">Africa</a></li>
             <li>
-              <a @click="clickAmerica" class="hover:bg-base-300 active:bg-base-100"
-                >America</a
+              <a @click="allRegion" class="hover:bg-base-300 active:bg-base-100"
+                >Todas as Regiões</a
               >
             </li>
-            <li><a class="hover:bg-base-300 active:bg-base-100">Asia</a></li>
+
+            <li>
+              <a @click="clickAfrica" class="hover:bg-base-300 active:bg-base-100"
+                >África</a
+              >
+            </li>
+
+            <li>
+              <a @click="clickAmerica" class="hover:bg-base-300 active:bg-base-100"
+                >Américas</a
+              >
+            </li>
+
+            <li>
+              <a @click="clickAsia" class="hover:bg-base-300 active:bg-base-100">Ásia</a>
+            </li>
+
             <li>
               <a @click="clickEurope" class="hover:bg-base-300 active:bg-base-100"
                 >Europa</a
               >
             </li>
-            <li><a class="hover:bg-base-300 active:bg-base-100">Oceania</a></li>
+
+            <li>
+              <a @click="clickOceania" class="hover:bg-base-300 active:bg-base-100"
+                >Oceânia
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -85,6 +108,7 @@ export default {
   data() {
     return {
       paises: [],
+      region: "Todas as Região",
       link: "https://restcountries.com/v3.1/all",
     };
   },
@@ -98,13 +122,43 @@ export default {
       }, 1000);
     },
 
+    allRegion() {
+      this.link = "https://restcountries.com/v3.1/all";
+      this.region = "Todas as Região";
+
+      this.getCountries();
+    },
+
     clickEurope() {
       this.link = "https://restcountries.com/v3.1/region/europe";
+      this.region = "Europa";
 
       return this.getCountries();
     },
     clickAmerica() {
       this.link = "https://restcountries.com/v3.1/region/america";
+      this.region = "Américas";
+
+      return this.getCountries();
+    },
+
+    clickAfrica() {
+      this.link = "https://restcountries.com/v3.1/region/africa";
+      this.region = "África";
+
+      return this.getCountries();
+    },
+
+    clickAsia() {
+      this.link = "https://restcountries.com/v3.1/region/asia";
+      this.region = "Ásia";
+
+      return this.getCountries();
+    },
+
+    clickOceania() {
+      this.link = "https://restcountries.com/v3.1/region/oceania";
+      this.region = "Oceânia";
 
       return this.getCountries();
     },
