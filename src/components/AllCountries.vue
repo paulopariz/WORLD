@@ -3,11 +3,16 @@
     <NavBar />
     <div class="container mt-16">
       <div class="flex justify-between items-center">
-        <input
-          type="search"
-          placeholder="Pesquise por algum país"
-          class="input w-full h-16 input-bordered border-2 border-base-300 max-w-md shadow-xl rounded-lg text-base tracking-wider font-normal placeholder:text-accent-content bg-base-200"
-        />
+        <div>
+          <input
+            v-model="searchCountries"
+            type="search"
+            placeholder="Pesquise por algum país"
+            class="input w-full h-16 input-bordered border-2 border-base-300 max-w-md shadow-xl rounded-lg text-base tracking-wider font-normal placeholder:text-accent-content bg-base-200"
+          />
+        </div>
+
+        <button @click="searchCountriesClick">xcxxc</button>
 
         <div class="dropdown dropdown-end">
           <label
@@ -114,11 +119,19 @@ export default {
       spinner: true,
       paises: [],
       region: "Todas as Região",
+
+      searchCountries: "",
       link: "https://restcountries.com/v3.1/all",
     };
   },
 
   methods: {
+    searchCountriesClick() {
+      this.link = `https://restcountries.com/v3.1/name/${this.searchCountries}`;
+
+      return this.getCountries();
+    },
+
     getCountries() {
       this.content = false;
       this.spinner = true;
