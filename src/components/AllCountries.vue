@@ -60,7 +60,9 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-16 mt-16">
+      <SpinnerCountries v-show="spinner" />
+
+      <div class="grid grid-cols-4 gap-16 mt-16" v-show="content">
         <div
           v-for="pais in paises"
           :key="pais"
@@ -100,13 +102,16 @@
 
 <script>
 import NavBar from "./NavBar.vue";
+import SpinnerCountries from "./SpinnerCountries.vue";
 
 export default {
   name: "AllCountries",
-  components: { NavBar },
+  components: { NavBar, SpinnerCountries },
 
   data() {
     return {
+      content: false,
+      spinner: true,
       paises: [],
       region: "Todas as Região",
       link: "https://restcountries.com/v3.1/all",
@@ -115,50 +120,65 @@ export default {
 
   methods: {
     getCountries() {
+      this.content = false;
+      this.spinner = true;
       setTimeout(() => {
+        this.content = true;
+        this.spinner = false;
         fetch(this.link)
           .then((response) => response.json())
           .then((data) => (this.paises = data));
-      }, 1000);
+      }, 1600);
     },
 
     allRegion() {
       this.link = "https://restcountries.com/v3.1/all";
-      this.region = "Todas as Região";
+      setTimeout(() => {
+        this.region = "Todas as Região";
+      }, 1600);
 
       this.getCountries();
     },
 
     clickEurope() {
       this.link = "https://restcountries.com/v3.1/region/europe";
-      this.region = "Europa";
-
+      setTimeout(() => {
+        this.region = "Europa";
+      }, 1600);
       return this.getCountries();
     },
     clickAmerica() {
       this.link = "https://restcountries.com/v3.1/region/america";
-      this.region = "Américas";
+      setTimeout(() => {
+        this.region = "Américas";
+      }, 1600);
 
       return this.getCountries();
     },
 
     clickAfrica() {
       this.link = "https://restcountries.com/v3.1/region/africa";
-      this.region = "África";
+      setTimeout(() => {
+        this.region = "África";
+      }, 1600);
 
       return this.getCountries();
     },
 
     clickAsia() {
       this.link = "https://restcountries.com/v3.1/region/asia";
-      this.region = "Ásia";
+      setTimeout(() => {
+        this.region = "Ásia";
+      }, 1600);
 
       return this.getCountries();
     },
 
     clickOceania() {
       this.link = "https://restcountries.com/v3.1/region/oceania";
-      this.region = "Oceânia";
+      setTimeout(() => {
+        this.region = "Oceânia";
+      }, 1600);
 
       return this.getCountries();
     },

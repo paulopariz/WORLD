@@ -19,4 +19,8 @@ export default {
 * {
   font-family: "Lato", sans-serif;
 }
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
 </style>
