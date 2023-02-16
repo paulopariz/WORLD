@@ -1,6 +1,7 @@
 <template>
   <div>
-    <AllCountries />
+    <NavBar />
+    <AllCountries class="px-4" />
   </div>
 </template>
 
@@ -9,11 +10,13 @@ import AllCountries from "./components/AllCountries.vue";
 
 import { onMounted } from "vue";
 import { themeChange } from "theme-change";
+import NavBar from "./components/NavBar.vue";
 
 export default {
   name: "App",
   components: {
     AllCountries,
+    NavBar,
   },
 
   setup() {
@@ -39,8 +42,11 @@ export default {
 [data-theme="dark"] .search {
   filter: invert(100%);
 }
-[data-theme="dark"] #logo {
+[data-theme="dark"] #logoImg {
   filter: invert(100%);
+}
+[data-theme="dark"] .logoText {
+  color: #fff;
 }
 [data-theme="light"] .theme {
   background-image: url("./assets/img/moonIcon.svg");
