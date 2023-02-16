@@ -39,4 +39,20 @@ export default {
 [data-theme="dark"] .search {
   filter: invert(100%);
 }
+[data-theme="dark"] #logo {
+  filter: invert(100%);
+}
+[data-theme="light"] .theme {
+  background-image: url("./assets/img/moonIcon.svg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+[data-theme="dark"] .theme {
+  background-image: url("./assets/img/sunIcon.svg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+}
 </style>
