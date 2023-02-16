@@ -3,16 +3,21 @@
     <NavBar />
     <div class="container mt-16">
       <div class="flex justify-between items-center">
-        <div>
+        <div class="flex items-center w-80">
           <input
             v-model="searchCountries"
             type="search"
+            @keyup.enter="searchCountriesClick"
             placeholder="Pesquise por algum país"
-            class="input w-full h-16 input-bordered border-2 border-base-300 max-w-md shadow-xl rounded-lg text-base tracking-wider font-normal placeholder:text-accent-content bg-base-200"
+            class="input w-full h-16 input-bordered border-2 border-base-300 shadow-xl rounded-lg rounded-r-none text-base tracking-wider font-normal placeholder:text-accent-content bg-base-200 focus:outline-0"
           />
+          <button
+            @click="searchCountriesClick"
+            class="btn h-16 rounded-l-none bg-base-300 border-base-300 hover:bg-base-300 hover:border-base-300"
+          >
+            <img src="../assets/img/search.svg" class="w-6 search" />
+          </button>
         </div>
-
-        <button @click="searchCountriesClick">xcxxc</button>
 
         <div class="dropdown dropdown-end">
           <label
@@ -22,7 +27,7 @@
             <span class="-ml-8 text-sm mt-0.5 text-base-content"
               >( {{ paises.length }} )</span
             >
-            <img src="../assets/img/arrow.svg" class="w-3 mt-1.5 invert"
+            <img src="../assets/img/arrow.svg" class="arrow w-3 mt-1.5"
           /></label>
           <ul
             tabindex="0"
@@ -71,7 +76,7 @@
         <div
           v-for="pais in paises"
           :key="pais"
-          class="w-72 rounded-lg border-2 border-t-0 border-base-300 bg-base-200 shadow-2xl"
+          class="w-72 rounded-lg border-2 border-t-0 border-base-300 bg-base-200 shadow-2xl m-auto"
         >
           <div class="">
             <img :src="pais.flags.png" class="rounded-lg rounded-b-none h-44 w-72" />
@@ -126,12 +131,6 @@ export default {
   },
 
   methods: {
-    searchCountriesClick() {
-      this.link = `https://restcountries.com/v3.1/name/${this.searchCountries}`;
-
-      return this.getCountries();
-    },
-
     getCountries() {
       this.content = false;
       this.spinner = true;
@@ -142,6 +141,12 @@ export default {
           .then((response) => response.json())
           .then((data) => (this.paises = data));
       }, 1600);
+    },
+
+    searchCountriesClick() {
+      this.link = `https://restcountries.com/v3.1/name/${this.searchCountries}`;
+
+      return this.getCountries();
     },
 
     allRegion() {
