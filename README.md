@@ -8,6 +8,20 @@
 
 <img  src="src/assets/img/.github/Untitled.png"><img>
 
+<br>
+
+<div style="display:flex">
+
+<img width="98%"  src="src/assets/img/.github/preview.gif"><img>
+
+<br>
+
+<img width="100%"  src="src/assets/img/.github/previewMobile.gif"><img>
+
+</div>
+
+
+
 <br><br>
 
 ## ⚡ Mais sobre o projeto:
