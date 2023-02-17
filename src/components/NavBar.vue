@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-base-100 h-20 shadow-md">
+  <div class="w-full bg-base-100 shadow-md">
     <div class="py-6 container px-4 flex items-center justify-between">
       <div class="flex items-center font-bold text-2xl logoText">
         W<img src="../assets/img/world.svg" id="logoImg" class="w-5 rounded-full" />RLD
@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #logoImg {
   animation: logoImg 25s linear infinite;
 }

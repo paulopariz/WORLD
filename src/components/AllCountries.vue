@@ -22,15 +22,26 @@
 
         <div class="dropdown dropdown-end max-sm:m-auto">
           <label
-            @click="dropRegionBtn"
             tabindex="0"
             class="btn transition-none h-16 bg-base-200 hover:bg-base-300 hover:border-base-300 border-2 border-base-300 text-base rounded-lg shadow-xl normal-case tracking-wider font-normal text-accent-content w-72 flex items-center gap-9 max-lg:w-80 max-sm:w-84 max-mn:w-72"
             >{{ region }}
             <span class="-ml-8 text-sm mt-0.5 text-base-content"
               >( {{ paises.length }} )</span
             >
-            <img src="../assets/img/arrow.svg" class="arrow w-3 mt-1.5"
-          /></label>
+            <label @click="dropRegionBtn" class="swap">
+              <input type="checkbox" />
+
+              <img
+                src="../assets/img/arrow.svg"
+                class="swap-off fill-current h-10 arrow w-3 mt-1.5"
+              />
+
+              <img
+                src="../assets/img/arrow.svg"
+                class="swap-on fill-current h-10 arrow w-3 mt-1.5 rotate-180"
+              />
+            </label>
+          </label>
           <ul
             v-show="dropRegion"
             tabindex="0"

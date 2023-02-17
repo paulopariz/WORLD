@@ -1,7 +1,13 @@
 <template>
   <div>
-    <NavBar />
-    <AllCountries class="px-4" />
+    <LoaderCountries
+      v-show="loader"
+      class="animate__animated animate__fadeOut animate__delay-5s"
+    />
+    <div v-show="content">
+      <NavBar class="animate__animated animate__fadeIn" />
+      <AllCountries class="px-4 animate__animated animate__fadeIn" />
+    </div>
   </div>
 </template>
 
@@ -11,12 +17,28 @@ import AllCountries from "./components/AllCountries.vue";
 import { onMounted } from "vue";
 import { themeChange } from "theme-change";
 import NavBar from "./components/NavBar.vue";
+import LoaderCountries from "./components/LoaderCountries.vue";
 
 export default {
   name: "App",
   components: {
     AllCountries,
     NavBar,
+    LoaderCountries,
+  },
+
+  data() {
+    return {
+      loader: true,
+      content: false,
+    };
+  },
+
+  created: function () {
+    setTimeout(() => {
+      this.loader = false;
+      this.content = true;
+    }, 7000);
   },
 
   setup() {
@@ -47,6 +69,9 @@ export default {
 }
 [data-theme="dark"] .logoText {
   color: #fff;
+}
+[data-theme="light"] .logoText {
+  color: #000;
 }
 [data-theme="light"] .theme {
   background-image: url("./assets/img/moonIcon.svg");
