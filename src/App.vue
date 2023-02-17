@@ -5,8 +5,10 @@
       class="animate__animated animate__fadeOut animate__delay-5s"
     />
     <div v-show="content">
-      <NavBar class="animate__animated animate__fadeIn" />
+      <NavBar />
       <AllCountries class="px-4 animate__animated animate__fadeIn" />
+
+      <BackTop />
     </div>
   </div>
 </template>
@@ -18,6 +20,7 @@ import { onMounted } from "vue";
 import { themeChange } from "theme-change";
 import NavBar from "./components/NavBar.vue";
 import LoaderCountries from "./components/LoaderCountries.vue";
+import BackTop from "./components/BackTop.vue";
 
 export default {
   name: "App",
@@ -25,6 +28,7 @@ export default {
     AllCountries,
     NavBar,
     LoaderCountries,
+    BackTop,
   },
 
   data() {
@@ -52,6 +56,7 @@ export default {
 <style>
 * {
   font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {

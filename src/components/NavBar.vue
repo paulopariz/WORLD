@@ -1,9 +1,16 @@
 <template>
-  <div class="w-full bg-base-100 shadow-md">
+  <div
+    id="countries"
+    class="w-full bg-base-100 shadow-md animate__animated animate__fadeInDown"
+  >
     <div class="py-6 container px-4 flex items-center justify-between">
-      <div class="flex items-center font-bold text-2xl logoText">
+      <a
+        href="https://github.com/paulopariz"
+        target="_blank"
+        class="flex items-center font-bold text-2xl logoText"
+      >
         W<img src="../assets/img/world.svg" id="logoImg" class="w-5 rounded-full" />RLD
-      </div>
+      </a>
       <div
         class="flex items-center btn rounded-lg bg-base-200 hover:bg-base-300 border-none transition-none"
       >

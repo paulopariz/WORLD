@@ -87,7 +87,7 @@
       <SpinnerCountries v-show="spinner" />
 
       <div
-        class="grid grid-cols-4 gap-16 mt-16 max-xl:grid-cols-3 max-lg:grid-cols-2 max-lg:gap-y-9 max-sm:grid-cols-1"
+        class="mb-16 grid grid-cols-4 gap-16 mt-16 max-xl:grid-cols-3 max-lg:grid-cols-2 max-lg:gap-y-9 max-sm:grid-cols-1"
         v-show="content"
       >
         <div
