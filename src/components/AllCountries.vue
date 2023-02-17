@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container mt-16">
+    <div class="container mt-40" id="countries">
       <div
         class="flex justify-between items-center max-lg:flex-col max-lg:items-start max-lg:gap-5"
       >
@@ -32,11 +32,13 @@
               <input type="checkbox" />
 
               <img
+                @click="dropRegionBtn"
                 src="../assets/img/arrow.svg"
                 class="swap-off fill-current h-10 arrow w-3 mt-1.5"
               />
 
               <img
+                @click="dropRegionBtn"
                 src="../assets/img/arrow.svg"
                 class="swap-on fill-current h-10 arrow w-3 mt-1.5 rotate-180"
               />
@@ -181,6 +183,7 @@ export default {
       this.link = "https://restcountries.com/v3.1/all";
       setTimeout(() => {
         this.region = "Todas as Região";
+        this.searchCountries = "";
       }, 1600);
 
       this.getCountries();
@@ -194,6 +197,7 @@ export default {
       this.link = "https://restcountries.com/v3.1/region/europe";
       setTimeout(() => {
         this.region = "Europa";
+        this.searchCountries = "";
       }, 1600);
       return this.getCountries();
     },
@@ -205,6 +209,7 @@ export default {
       this.link = "https://restcountries.com/v3.1/region/america";
       setTimeout(() => {
         this.region = "Américas";
+        this.searchCountries = "";
       }, 1600);
 
       return this.getCountries();
@@ -218,6 +223,7 @@ export default {
       this.link = "https://restcountries.com/v3.1/region/africa";
       setTimeout(() => {
         this.region = "África";
+        this.searchCountries = "";
       }, 1600);
 
       return this.getCountries();
@@ -231,6 +237,7 @@ export default {
       this.link = "https://restcountries.com/v3.1/region/asia";
       setTimeout(() => {
         this.region = "Ásia";
+        this.searchCountries = "";
       }, 1600);
 
       return this.getCountries();
@@ -244,6 +251,7 @@ export default {
       this.link = "https://restcountries.com/v3.1/region/oceania";
       setTimeout(() => {
         this.region = "Oceânia";
+        this.searchCountries = "";
       }, 1600);
 
       return this.getCountries();

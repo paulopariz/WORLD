@@ -1,7 +1,6 @@
 <template>
   <div
-    id="countries"
-    class="w-full bg-base-100 shadow-md animate__animated animate__fadeInDown"
+    class="fixed z-50 top-0 bg-base-100 w-full shadow-md animate__animated animate__fadeInDown"
   >
     <div class="py-6 container px-4 flex items-center justify-between">
       <a
@@ -17,7 +16,7 @@
         <h1 class="mr-6 tracking-wider text-base-content">Tema</h1>
 
         <button data-toggle-theme="light,dark" data-act-class="ACTIVECLASS">
-          <div class="w-9 theme" />
+          <div class="w-9 theme animate__animated animate__rotateIn" />
         </button>
       </div>
     </div>

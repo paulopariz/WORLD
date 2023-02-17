@@ -42,7 +42,7 @@ export default {
     setTimeout(() => {
       this.loader = false;
       this.content = true;
-    }, 7000);
+    }, 8000);
   },
 
   setup() {
