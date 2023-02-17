@@ -1,7 +1,7 @@
 <template>
   <a
     href="#countries"
-    class="btn py-3 px-4 flex items-center justify-center bg-base-300 hover:bg-base-300 border-none fixed z-50 bottom-2 right-3 transition-none"
+    class="btn py-3 px-4 flex items-center justify-center bg-base-300 hover:bg-base-300 border-none fixed z-50 bottom-2 right-3 transition-none rounded-lg"
   >
     <img src="../assets/img/arrow.svg" class="arrow w-3 rotate-180" />
   </a>
