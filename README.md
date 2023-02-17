@@ -10,15 +10,8 @@
 
 <br>
 
-<div style="display:flex">
+https://user-images.githubusercontent.com/111146928/219812392-33dee2af-a673-433b-a2a9-aa7b9c647466.mp4
 
-<img width="98%"  src="src/assets/img/.github/preview.gif"><img>
-
-<br>
-
-<img width="100%"  src="src/assets/img/.github/previewMobile.gif"><img>
-
-</div>
 
 
 
@@ -39,7 +32,13 @@
 - Ásia: 50 países.
 - Europa: 53 países.
 - Oceânia: 27 países.
-- Outros: 5 países
+- Outros: 5 países.
+
+<br>
+
+- Retorna o nome do país, região, capital, população e área territorial.
+
+<br>
 
 - LINK DA API: https://restcountries.com/
 
@@ -69,3 +68,14 @@
  <a href= "https://api.whatsapp.com/send?phone=5544999575376"><img src="https://img.icons8.com/material-outlined/24/7950F2/whatsapp--v1.png"/></a> <a href="https://www.instagram.com/parizpaulo_/" style="margin-left:10px"><img src="https://img.icons8.com/material-outlined/24/7950F2/instagram-new--v1.png"/></a> <a href="paulopariz01@gmail.com" style="margin-left:10px"><img src="https://img.icons8.com/material-rounded/24/7950F2/filled-message.png"/></a> <a href="https://www.linkedin.com/in/paulopariz/" style="margin-left:10px"><img src="https://img.icons8.com/material-sharp/24/7950F2/linkedin--v1.png"/></a><a href="https://paulopariz.vercel.app/" style="margin-left:10px"><img src="https://img.icons8.com/ios-glyphs/24/7950F2/portfolio.png"/></a>
 
  </div>
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
