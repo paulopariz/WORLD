@@ -1,8 +1,8 @@
-<h2 align="center">API Paises </h2>
+<h2 align="center">API Paises 🇧🇷</h2>
 
 <br>
 
-<p align="center">Projeto construído com uma API para resgatar os dados de 250 países, podendo filtrar por região: África, Américas, Ásia, Europa e Oceânia.</p>
+<p align="center">Projeto construído com uma API para resgatar os dados de 250 países, podendo pesquisar por um país e filtrar por região: África, Américas, Ásia, Europa e Oceânia.</p>
 
 <br><br>
 
@@ -52,7 +52,7 @@ https://user-images.githubusercontent.com/111146928/219812392-33dee2af-a673-433b
 <br>
 
 ## 📍 DEPLOY :
-- <a href="">CLIQUE AQUI PARA VER O PROJETO</a>
+- <a href="https://world-paises.vercel.app/">CLIQUE AQUI PARA VER O PROJETO</a>
 
 <br>
 
@@ -68,14 +68,4 @@ https://user-images.githubusercontent.com/111146928/219812392-33dee2af-a673-433b
  <a href= "https://api.whatsapp.com/send?phone=5544999575376"><img src="https://img.icons8.com/material-outlined/24/7950F2/whatsapp--v1.png"/></a> <a href="https://www.instagram.com/parizpaulo_/" style="margin-left:10px"><img src="https://img.icons8.com/material-outlined/24/7950F2/instagram-new--v1.png"/></a> <a href="paulopariz01@gmail.com" style="margin-left:10px"><img src="https://img.icons8.com/material-rounded/24/7950F2/filled-message.png"/></a> <a href="https://www.linkedin.com/in/paulopariz/" style="margin-left:10px"><img src="https://img.icons8.com/material-sharp/24/7950F2/linkedin--v1.png"/></a><a href="https://paulopariz.vercel.app/" style="margin-left:10px"><img src="https://img.icons8.com/ios-glyphs/24/7950F2/portfolio.png"/></a>
 
  </div>
- 
- 
- 
-
-
-
- 
- 
- 
- 
  
